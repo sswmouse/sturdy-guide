@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-upload": "/dist/upload/index"
+  },
+  "navigationBarTitleText": "货品详情"
+}

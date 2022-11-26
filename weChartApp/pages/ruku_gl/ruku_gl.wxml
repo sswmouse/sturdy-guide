@@ -1,0 +1,192 @@
+<!-- 最外层 -->
+<view class="coverdiv bggg">
+  <!-- 满屏 -->
+  <view class="container" style="{{'height:'+bot_height+'px'}}">
+    <!-- 货品入库信息 表单div -->
+    <view class="formondiv">
+      <!-- 表单全部内容 -->
+      <view class="weui-cells__group weui-cells__group_form">
+        <!-- 货品入库信息 标题 -->
+        <view class="weui-cells__title">货品入库信息</view>
+        <view class="weui-cells weui-cells_form">
+          <!-- 入库编号 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">入库货品编号
+                <text style="color:red">*</text>
+              </label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="请填写入库货品编号" placeholder-class="weui-input__placeholder"
+                bindinput='ch_id' />
+            </view>
+          </view>
+          <!-- 入库名称 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">
+                入库货品名称
+                <text style="color:red">*</text>
+              </label>
+
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="请填写入库货品名称" placeholder-class="weui-input__placeholder"
+                bindinput='ch_nm' />
+            </view>
+          </view>
+          <!-- 货品类别 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">货品类别
+                <text style="color:red">*</text> </label>
+            </view>
+            <view class="weui-cell__bd">
+              <view bindtap="treeyetab">
+                <icon class="{{treeye==0?'Icon2':'Icon1'}}"></icon>
+                <span class="weui-input__placeholder naer_left">请选择货品类别</span>
+                <!-- <image wx:if="{{treeye==0}}" class="treeye" src="/images/upper.png"></image>
+                <image wx:if="{{treeye==1}}" class="treeye2" src="/images/down_triangle.png"></image> -->
+              </view>
+            </view>
+          </view>
+          <!-- 货品类别选项 -->
+          <view wx:if="{{treeye==1}}" class="classify">
+            <view wx:for="{{classList}}" wx:key='*this' class="{{is_classList==index?'is_classList':'classList'}}"
+              bindtap="classify" data-index="{{index}}">{{item.name}}</view>
+            <view class="classList" bindtap="to_add" data-index="{{index}}">+</view>
+          </view>
+          <!-- 货品数量选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">货品数量
+                <text style="color:red">*</text> </label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" type="number" placeholder="请填写入库货品数量"
+                placeholder-class="weui-input__placeholder" bindinput='ch_num' />
+            </view>
+          </view>
+          <!-- 货品颜色 选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">货品颜色</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="请填写入库货品颜色" placeholder-class="weui-input__placeholder"
+                bindinput='ch_clour' />
+            </view>
+          </view>
+          <!-- 货品尺码 选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">货品尺码</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="请填写入库货品尺码" placeholder-class="weui-input__placeholder"
+                bindinput='ch_size' />
+            </view>
+          </view>
+          <!-- 货品价格 选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">货品价格<text style="color:red">*</text></label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" type="number" placeholder="请填写入库货品价格"
+                placeholder-class="weui-input__placeholder" bindinput='ch_money' />
+            </view>
+          </view>
+          <!-- 上架时间 选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">上架时间<text style="color:red">*</text></label>
+            </view>
+            <view class="weui-cell__bd">
+              <picker class="naer_left" mode="date" value="{{nowTime}}" start="2000-01-01" end="{{nowTime}}"
+                bindchange="bindDateChange">
+                <text class="weui-input__placeholder">{{uptime}}</text>
+              </picker>
+            </view>
+          </view>
+          <!-- 上架货品(图片) 选项 -->
+          <view class="weui-cell weui-cell_active blk">
+            <view class="weui-cell__hd">
+              <label class="weui-label">上架货品<text style="color:red">*</text></label>
+            </view>
+            <text>\n</text>
+            <view class="weui-cell__bd">
+              <wux-upload listType="picture-card" fileList="{{ fileList }}" controlled
+                url="https://www.skyvow.cn/api/common/file" bind:change="onChange" bind:success="onSuccess"
+                bind:complete="onComplete" bind:preview="onPreview" bind:remove="onRemove" max='3'>
+                <text>+</text>
+              </wux-upload>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+
+    <!-- 其他信息 表单div -->
+    <view class="formondiv">
+      <view class="weui-cells__group weui-cells__group_form">
+        <view class="weui-cells__title">其他信息</view>
+        <view class="weui-cells weui-cells_form">
+          <!-- 供货商姓名 选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">供货商姓名</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="供货商姓名" placeholder-class="weui-input__placeholder"
+                bindinput='ch_gong_nm' value="{{ch_gong_nm_value}}" bindblur="ch_gong_nm_sq"
+                bindfocus="ch_gong_nm_hq" />
+            </view>
+            <!-- 选择客户的弹框 -->
+            <view class="kehu_chose_tk_css" wx:if="{{kehu_show}}">
+              <view class="name_css">
+                <view class="ghs_xx" wx:for="{{gong_arr}}" wx:key="this" bindtap="chose_kehu_btn" data-item="{{item}}">
+                  {{item.gong_name}}
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 供货商手机号 选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <label class="weui-label">供货商手机号</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" type="number" placeholder="供货商手机号" placeholder-class="weui-input__placeholder"
+                bindinput='ch_gong_tel' value="{{ch_gong_tel_value}}"/>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 备注 表单div -->
+    <view class="formondiv">
+      <view class="weui-cells__group weui-cells__group_form">
+        <!-- 备注 标题 -->
+        <view class="weui-cells__title">备注</view>
+        <view class="weui-cells weui-cells_form">
+          <!-- 备注 选项 -->
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__bd">
+              <input class="weui-input1" type="text" placeholder="请输入" placeholder-class="weui-input__placeholder1"
+                bindinput='ch_beizhu' />
+              <!-- <textarea class="inp_bz" type="text"  placeholder="请输入"
+                 bindinput='ch_beizhu' /> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 保存按钮 -->
+  <view class="zz_sub" bindtap="zz_sub">保存</view>
+</view>

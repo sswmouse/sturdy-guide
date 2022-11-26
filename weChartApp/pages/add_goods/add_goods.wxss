@@ -1,0 +1,314 @@
+/* pages/add_goods/add_goods.wxss */
+/* 添加货品页面 */
+.add_goods{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  position: relative;
+}
+/* 顶部 */
+.top{
+  width: 94%;
+  margin: 0 auto;
+  position: relative;
+  /* border: 1px solid blue; */
+}
+/* 搜索栏 */
+.sousuo{
+  display: flex;
+  margin: 3% 0 3% 0;
+}
+/* 输入框和搜索图标所在的div */
+.inps{
+  flex: 8;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+/* 输入框 */
+.inp{
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+}
+/* 搜索图标 */
+.weui-icon-search{
+  width: 10%;
+  height: 100%;
+  vertical-align: top;
+}
+/* 按钮 */
+.add_btn{
+  flex: 2;
+  font-size: 14px;
+  margin: 0;
+  padding: 6px 0;
+  background-color: #FCCD05;
+}
+
+/* 排序分类 */
+.fenlei{
+  display: flex;
+  /* margin-bottom: 2%; */
+}
+.fenlei-row{
+  flex: 1;
+  /* border: 1px solid blue; */
+}
+.fenlei-row-all{
+  flex: 2;
+  text-align: center;
+}
+.text_no{
+  color: #939393;
+  margin-right: 4%;
+  font-size: 14px;
+}
+.text_yes{
+  color: red;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.icon1{
+  width: 10px;
+  height: 13px;
+  vertical-align: middle;
+}
+
+.Icon1{
+  width: 0px;
+  height: 0px;
+  border-top: 5px solid black;
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+  margin-bottom: -3px;
+  display: inline-block;
+}
+/* 分类选项图标2 */
+.Icon2{
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 5px solid black;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+/* 货品详情内容 */
+.hp_xq{
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.05);
+  overflow: scroll;
+  /* border: 1px solid green; */
+  padding: 10px 0;
+}
+.hp_xq::-webkit-scrollbar{
+  display: none;
+}
+.content{
+  width: 94%;
+  margin: 0 auto;
+  /* padding-top: 10px; */
+}
+.hp_card{
+  width: 100%;
+  background-color: white;
+  margin: 10px 0;
+  /* border: 1px solid cyan; */
+}
+.one{
+  display: flex;
+}
+.left{
+  flex: 1;
+  position: relative;
+  /* border: 1px solid red; */
+}
+.right{
+  flex: 3;
+  font-size: 12px;
+  padding: 5px 0;
+  /* border: 1px solid red; */
+}
+.img{
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  /* padding: 10px; */
+}
+.hp_sl{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 15px;
+  font-size: 12px;
+  text-align: center;
+  background-color: #FCEC03;
+}
+
+/* 选好了按钮 */
+.sub_btn{
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  /* border-top: 1px solid rgb(177, 177, 177); */
+}
+.sub_content{
+  width: 95%;
+  display: flex;
+  margin: 0% 0% 0% 5%;
+  /* border: 1px solid red; */
+}
+.sub_row1{
+  flex: 8;
+  padding: 0% 0% 0% 2%;
+  font-size: 13px;
+  padding: 1% 0% 1% 1%;
+  /* border: 1px solid green; */
+}
+.gong{
+  color: red;
+}
+.sub_row2{
+  flex: 10;
+  /* border: 1px solid green; */
+  text-align: center;
+  background-color: #FAEC03;
+  padding: 4% 0% 4% 0%;
+  font-size: 14px;
+  font-weight: bold;
+}
+.sub_row3{
+  flex: 8;
+  /* border: 1px solid green; */
+  text-align: center;
+  background-color: #FCCD05;
+  padding: 4% 0% 4% 0%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 已选择按钮 */
+.weui-half-screen-dialog{
+  overflow: scroll;
+}
+.weui-half-screen-dialog::-webkit-scrollbar{
+  display: none;
+}
+.weui-half-screen-dialog__bd{
+  padding: 2% 0%;
+  /* height: 700px;
+  overflow: scroll; */
+}
+.yixuan_hp_row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-bottom: 1px solid rgb(235, 234, 234); */
+}
+.yixuan_hp_row1{
+  flex: 2;
+  /* border: 1px solid blue; */
+}
+.yixuan_hp_row2{
+  flex: 1;
+  text-align: right;
+  /* border: 1px solid blue; */
+}
+.yixuan_hp_row3{
+  flex: 0.3;
+  text-align: right;
+  /* border: 1px solid blue; */
+}
+.yixuan_del{
+  width: 14px;
+  height: 14px;
+}
+.yixuan_hp_row1_img{
+  width: 50px;
+  height: 50px;
+  margin-right: 2%;
+  /* border: 1px solid red; */
+  vertical-align: top;
+}
+.yixuan_name{
+  display: inline-block;
+  /* border: 1px solid red; */
+}
+.yixuan_hp_cs{
+  /* border: 1px solid red; */
+  margin: 2% 0%;
+  padding: 2% 0%;
+  border-top: 1px solid rgb(235, 234, 234);
+  border-bottom: 1px solid rgb(235, 234, 234);
+  display: flex;
+  align-items: center;
+}
+.yixuan_dx{
+  flex: 1;
+}
+.yixuan_jg{
+  flex: 1;
+}
+.yixuan_sl{
+  flex: 2;
+  display: flex;
+}
+.reduce{
+  width: 40px;
+  height: 28px;
+  flex: 1;
+}
+.num{
+  flex: 1;
+  font-size: 15px;
+  vertical-align: top;
+  text-align: center;
+}
+.add{
+  flex: 1;
+  width: 40px;
+  height: 28px;
+}
+
+/* 选择分类弹框 */
+.kehu_chose_tk_css {
+  /* border: 1px solid darkgray; */
+  background-color:  rgb(239 233 233);
+  position: absolute;
+  right: 3%;
+  top: 100%;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius:15px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.name_css {
+  /* border: 1px solid red; */
+  /* margin: 2% 0%; */
+  max-height: 165px;
+  overflow: scroll;
+}
+
+.aroow_css {
+  position: fixed;
+  right: 11%;
+  top: 12.2%;
+  width: 0%;
+  height: 0%;
+  border-bottom: 10px solid  rgb(239 233 233);
+  border-left: 10px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid rgba(0, 0, 0, 0);
+  border-top: 10px solid rgba(0, 0, 0, 0);
+}

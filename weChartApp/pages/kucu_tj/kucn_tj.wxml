@@ -1,0 +1,74 @@
+<!--pages/kucu_tj/kucn_tj.wxml-->
+<view class="kucun_tj">
+  <view class="top">
+    <view class="xuanxiang">
+      <view bindtap="look_shang" class="{{is_shang?'xuan1 xuanzhong':'xuan1'}}">上架商品</view>
+      <view bindtap="look_xia" class="{{is_shang==false?'xuan2 xuanzhong':'xuan2'}}">下架商品</view>
+    </view>
+
+    <!-- 顶部总数统计 -->
+    <view wx:if="{{is_shang}}" class="top_three">
+      <view class="top_three_num">{{shang_number}}</view>
+      <view class="top_three_text">库存总量</view>
+    </view>
+    <view wx:if="{{is_shang==false}}" class="top_three">
+      <view class="top_three_num">{{xia_number}}</view>
+      <view class="top_three_text">库存总量</view>
+    </view>
+  </view>
+  <view class="bottom" style='{{"height: " + bottom +"px;"}}'>
+
+    
+
+    <view wx:if="{{is_shang}}">
+      <view class="card" wx:for="{{shang_list}}" wx:key="this">
+        <view class="card_top">
+          <view class="card_top_left">
+            <image class="img" src="{{url+'img/'+item.goods_img[0]}}"></image>
+          </view>
+          <view class="card_top_right">
+            <text>货品名称：{{item.goods_name}}</text>
+            <text>\n</text>
+            <text>货品编号：{{item.goods_id}}</text>
+            <text>\n</text>
+            <text>货品颜色：{{item.goods_color}}</text>
+            <text>\n</text>
+            <text>货品尺码：{{item.goods_size}}</text>
+            <text>\n</text>
+            <text>入库数量：{{item.goods_number}}</text>
+          </view>
+        </view>
+        <view class="card_bottom">
+          <text class="card_bottom_left">供货商姓名：{{item.ghs_name}}</text>
+          <text class="card_bottom_right">上架时间：{{item.goods_date}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{is_shang==false}}">
+      <view class="card" wx:for="{{xia_list}}" wx:key="this">
+        <view class="card_top">
+          <view class="card_top_left">
+            <image class="img" src="{{url+'img/'+item.goods_img[0]}}"></image>
+          </view>
+          <view class="card_top_right">
+            <text>货品名称：{{item.goods_name}}</text>
+            <text>\n</text>
+            <text>货品编号：{{item.goods_id}}</text>
+            <text>\n</text>
+            <text>货品颜色：{{item.goods_color}}</text>
+            <text>\n</text>
+            <text>货品尺码：{{item.goods_size}}</text>
+            <text>\n</text>
+            <text>入库数量：{{item.goods_number}}</text>
+          </view>
+        </view>
+        <view class="card_bottom">
+          <text class="card_bottom_left">供货商姓名：{{item.ghs_name}}</text>
+          <text class="card_bottom_right">上架时间：{{item.goods_date}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

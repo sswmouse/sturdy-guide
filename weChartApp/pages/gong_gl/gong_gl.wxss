@@ -1,0 +1,157 @@
+.disflex{
+  display: flex;
+  height: 5vh;
+  justify-content:space-between;
+  align-content: flex-start;
+}
+
+.display_flex{
+  display: flex;
+  align-items: center;
+}
+
+.flexinput{
+  flex: 3;
+  position: relative;
+  padding-left: 1%;
+}
+
+.flexsx{
+  flex:1.5;
+}
+
+.leftcen{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  margin: auto;
+}
+
+.flexone{
+  flex:1;
+  text-align: center;
+}
+
+.nndiv{
+  flex: 0.2;
+}
+
+.padr{
+  padding-right: 10px;
+}
+
+.bgg{
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.grey{
+  color: #8f8f8f;
+}
+
+.bgcy{
+  background-color: #FCCD05;
+}
+
+.yellow{
+  color: #FCCD05;
+}
+
+.hh{
+  font-size: 16px;
+}
+
+.container {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.padl{
+  padding-left: 20px;
+}
+
+.lh{
+  line-height: 5vh;
+  width: 90% ;
+  margin: 0 auto;
+}
+
+.red{
+  color: #d52929;
+}
+
+.myrowbb{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.pad1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.v-cen{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+view{
+  font-size: 12px;
+}
+
+.warn{
+  background-color: #fa5151;
+  color: white;
+}
+
+.btndiv{
+  text-align: end;
+  border-radius: 5px;
+}
+
+.card{
+  overflow: scroll;
+  width: 90%;
+  margin: 0 auto;
+}
+.card::-webkit-scrollbar{
+  display: none;
+}
+
+/* 顶部 */
+.sousuo{
+  display: flex;
+  margin:0 5%;
+  padding: 3% 0;
+}
+
+/* 输入框和搜索图标所在的div */
+.inps{
+  flex: 8;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+/* 输入框 */
+.inp{
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+}
+/* 搜索图标 */
+.weui-icon-search{
+  width: 10%;
+  height: 100%;
+  vertical-align: top;
+}
+/* 按钮 */
+.btn{
+  flex: 3;
+  font-size: 12px;
+  margin: 0;
+  padding: 6px;
+  background-color: #FCCD05;
+}

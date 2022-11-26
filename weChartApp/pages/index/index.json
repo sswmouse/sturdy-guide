@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "card":"/components/card/card"
+  },
+  "backgroundTextStyle":"light",
+  "navigationBarBackgroundColor": "#272a3b",
+  "navigationBarTitleText": "早上好！张先生",
+  "navigationBarTextStyle":"white"
+}

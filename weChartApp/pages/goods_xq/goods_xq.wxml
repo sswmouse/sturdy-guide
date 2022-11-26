@@ -1,0 +1,56 @@
+<!--pages/goods_xq/goods_xq.wxml-->
+<view class="huopin">
+  <!-- 顶部的货品卡片和选择的参数 -->
+  <view class="top">
+    <!-- 货品卡片 -->
+    <view class="hp_card">
+      <view class="left">
+        <image wx:if="{{list.goods_img}}" class="img" src="{{url+'img/'+list.goods_img[0]}}"></image>
+      </view>
+      <view class="right">
+        <text>货品名称：{{list.goods_name}}</text>
+        <text>\n</text>
+        <text>货品编号：{{list.goods_id}}</text>
+        <text>\n</text>
+        <text>货品价格：{{list.goods_price}}</text>
+      </view>
+    </view>
+    <!-- 货品颜色 -->
+    <view class="hp_color">货品颜色</view>
+    <!-- 颜色选择 -->
+    <view class="hp_color_chose">
+      <view class="color_chose">{{list.goods_color}}</view>
+    </view>
+    <!-- 尺码参数选项 -->
+    <view class="chima">
+      <view class="chima_xx_row1">尺码</view>
+      <view class="chima_xx_row1">库存</view>
+      <view class="chima_xx_row2"></view>
+    </view>
+    <!-- 尺码选项参数 -->
+    <view class="chima">
+      <view class="chima_cs_row1">{{list.goods_size}}</view>
+      <view class="chima_cs_row1">{{list.goods_number}}</view>
+      <view class="chima_cs_row2">
+        <image class="reduce" src="{{reduce_icon}}" bindtap="reduce_btn"></image>
+        <input class="num" type="number" value="{{reduce_add}}" bindinput="change_num"/>
+        <image class="add" src="{{add_icon}}" bindtap="add_btn"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 底部按钮选好了 -->
+  <view class="sub_btn">
+    <view class="sub_content">
+      <view class="sub_row1">
+        <view>出: {{reduce_add}}</view>
+        <view class="gong">共计:{{total}}
+
+         </view>
+      </view>
+      <view class="sub_row2">
+        <view class="xhl" bindtap="xhl_btn">选好了</view>
+      </view>
+    </view>
+  </view>
+
+</view>

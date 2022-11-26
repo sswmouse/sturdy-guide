@@ -1,0 +1,39 @@
+<!--pages/index/index.wxml-->
+<view class="home">
+  <view class="top">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+      <swiper-item wx:for="{{imgs2}}" wx:key="*this">
+        <image class="img" src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="function">
+    <view wx:for="{{icon2}}" class="flex-item" wx:key='*this'>
+      <navigator url="{{url[index]}}">
+        <image class="icon" src="{{item}}"></image>
+        <view class="icon_text">{{text[index]}}</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="function2">
+    <view wx:for="{{icon3}}" class="flex-item2" wx:key='*this'>
+      <!-- <navigator url="{{url[index]}}"> -->
+        <image class="icon" src="{{item}}" bindtap="onShowModel"></image>
+        <view class="icon_text">{{text3[index]}}</view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+
+  <!-- 灰色遮罩，防止误触，可加可不加 -->
+  <view class="mask" wx:if="{{show}}" bindtap="onShowModel"></view>
+  <!-- 自定义的弹窗 -->
+  <view class="windows"  wx:if="{{show}}">
+    <view class="top">功能B</view>
+    <view wx:for="{{icon3}}" class="center" wx:key='*this'>
+        <image class="icon" src="{{item}}"></image>
+        <view class="icon_text">{{text[index]}}</view>
+    </view>
+  </view>
+</view>

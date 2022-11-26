@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle":"light",
+  "navigationBarBackgroundColor": "#fcd005",
+  "navigationBarTitleText": "库存总量",
+  "navigationBarTextStyle":"black"
+}

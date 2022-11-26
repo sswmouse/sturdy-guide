@@ -1,0 +1,100 @@
+/* pages/index/index.wxss */
+.home {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+  height: 100vh;
+}
+
+/* .top {
+  height: 300rpx;
+} */
+/* 轮播图片 */
+.img {
+  width: 100%;
+  height: 272rpx;
+
+}
+
+/* 下方选择栏 */
+.function {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30rpx;
+}
+
+/* 弹性分布 */
+.flex-item {
+  flex: 0 0 20%;
+  background-color: #272a3b;
+  text-align: center;
+  padding: 30rpx 0 30rpx 0;
+}
+
+/* 图标大小 */
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 字体 */
+.icon_text {
+  font-size: 24rpx;
+  color: #999999;
+  font-weight: bold;
+}
+
+.function2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0rpx;
+}
+
+.flex-item2 {
+  flex: 0 0 25%;
+  border: 1rpx solid #f5f5f5;
+  background-color: white;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 30rpx 0 30rpx 0;
+}
+
+/* 遮罩层 */
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 55, 55, 0.651);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+}
+
+/* 自定义弹窗主体 */
+.windows {
+  width: 600rpx;
+  height: 700rpx;
+  border-radius: 10rpx;
+  background-color: #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.windows .top{
+  flex: 100%;
+  background-color: #272a3b;
+  text-align: center;
+  color: #89c100;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.windows .center{
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  text-align: center;
+}

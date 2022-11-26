@@ -1,0 +1,128 @@
+<!--pages/chuku/chuku.wxml-->
+<view class="chuku">
+  <!-- 选择客户的弹框 -->
+  <view class="kehu_chose_tk_css" wx:if="{{kehu_show}}">
+    <view class="aroow_css"></view>
+    <view class="name_css">
+      <view wx:for="{{kehu_arr}}" wx:key="this" bindtap="chose_kehu_btn" data-item="{{item.kehu_name}}">
+        {{item.kehu_name}}
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <!-- 客户 -->
+    <view class="kehu">
+      <!-- 客户第一行分布 -->
+      <view class="kehu_row">
+        <view class="kehu_row1">
+          <image class="icon_left" src="{{left_icon}}"></image>
+          <text class="text1">客户</text>
+        </view>
+        <view class="kehu_row2">
+          <view bindtap="kehu_chose_btn">
+            <text class="text_right">{{kehu_arr_name}}</text>
+            <image class="icon_arrow" src="{{arrow_icon}}"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 客户第三行分布 -->
+      <view class="yixuan_hp_card">
+        <view class="yixuan_hp" wx:for="{{goods_xh}}" wx:key="*this">
+          <view class="yixuan_hp_row">
+            <view class="yixuan_hp_row1">
+              <image class="yixuan_hp_row1_img" src="{{url+'img/'+item.goods_img[0]}}"></image>
+              <view class="yixuan_name">
+                <text>货品名称: {{item.goods_name}}</text><text>\n</text>
+                <text>货品编号: {{item.goods_id}}</text>
+              </view>
+            </view>
+            <view class="yixuan_hp_row2">
+              <text>出: {{item.num}}</text>
+            </view>
+            <view class="yixuan_hp_row3">
+              <image class="yixuan_del" src="{{del_icon}}" bindtap="del_btn" data-item="{{item}}"></image>
+            </view>
+          </view>
+          <view class="yixuan_hp_cs">
+            <view class="yixuan_dx">
+              <text>{{item.goods_size}} 码</text>
+            </view>
+            <view class="yixuan_jg">
+              <text>价格: {{item.goods_price}}</text>
+            </view>
+            <view class="yixuan_sl">
+              <image class="reduce" src="{{reduce_icon}}" bindtap="reduce_btn" data-item="{{item}}"></image>
+              <text class="num">{{item.num}}</text>
+              <image class="add" src="{{add_icon}}" bindtap="add_btn" data-item="{{item}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 客户第三行分布 -->
+      <view class="kehu_row">
+        <view class="kehu_row34">
+
+          <view bindtap="add_goods">
+            <image class="icon" src="{{add_hp_icon}}"></image>
+            <text class="text2">添加货品</text>
+          </view>
+
+        </view>|
+        <view class="kehu_row34">
+
+          <view>
+            <image class="icon" src="{{txm_icon}}"></image>
+            <text class="text2">扫条码</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+    <!-- 货品合计 -->
+    <view class="kehu">
+      <!-- 货品第一行分布 -->
+      <view class="kehu_row">
+        <view class="kehu_row1">
+          <image class="icon_left" src="{{left_icon}}"></image>
+          <text class="text1">货品合计</text>
+        </view>
+        <view class="kehu_row2">
+          <text class="text_right">{{goods_xh_price}} 元</text>
+        </view>
+      </view>
+      <!-- 货品第二行分布 -->
+      <view class="kehu_row">
+        <view class="kehu_row5">
+          <text class="text_left">开单人</text>
+        </view>
+        <view class="kehu_row6">
+          <text class="text_right">{{kaidan_name}}</text>
+        </view>
+      </view>
+      <!-- 货品第三行分布 -->
+      <view class="kehu_row">
+        <view class="kehu_row5">
+          <text class="text_left">开单日期</text>
+        </view>
+        <view class="kehu_row6">
+          <text class="text_right">{{myData}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 备注 -->
+    <view class="kehu">
+      <view class="beizhu_row">
+        <image class="icon_left" src="{{left_icon}}"></image>
+        <text class="text1">备注</text>
+      </view>
+      <view class="beizhu_area">
+        <textarea class="weui-textarea" placeholder="请输入" bindinput="change_beizhu" style="height: 100px"
+          maxlength="50" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 保存出库单 -->
+  <view bindtap="bc_btn" class="bc_btn_css">保存出库单</view>
+</view>

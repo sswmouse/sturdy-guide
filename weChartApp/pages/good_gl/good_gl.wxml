@@ -1,0 +1,13 @@
+<!--pages/good_gl/good_gl.wxml-->
+<view class="container bggg">
+  <view class="carddiv">
+    <view class="cardrow disflex">
+      <button bindtap="newlei" class="flexinput bgcy">新增货品类别</button>
+      <view class="nndiv"></view>
+    </view>
+
+    <wux-swipe-action wx:for="{{list}}" wx:key='this' bind:click="onClose" data="{{item}}" autoClose right="{{ right }}">
+      <view class="demo-item">{{item.name}}</view>
+    </wux-swipe-action>
+  </view>
+</view>

@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goods/goods",
+    "pages/add_goods/add_goods",
+    "pages/good_gl/good_gl",
+    "pages/mine/mine",
+    "pages/chuku_gl/chuku_gl",
+    "pages/kucun_gl/kucun_gl",
+    "pages/people_gl/people_gl",
+    "pages/ruku_gl/ruku_gl",
+    "pages/register/register",
+    "pages/kucu_tj/kucn_tj",
+    "pages/ruku_tj/ruku_tj",
+    "pages/my_xin/my_xin",
+    "pages/chuku_tj/chuku_tj",
+    "pages/goods_xq/goods_xq",
+    "pages/chukudan_bc/chukudan_bc",
+    "pages/goods_detail/goods_detail",
+    "pages/em_good_lei/em_good_lei",
+    "pages/newlei/newlei",
+    "pages/gong_gl/gong_gl",
+    "components/card/card",
+    "pages/kehu_gl/kehu_gl",
+    "pages/dy_gl/dy_gl",
+    "pages/new_gong/new_gong",
+    "pages/new_kehu/new_kehu",
+    "pages/new_lihuo/new_lihuo",
+    "pages/new_lihuo_yes/new_lihuo_yes",
+    "pages/ch_gong/ch_gong",
+    "pages/ch_kehu/ch_kehu",
+    "pages/ch_dy/ch_dy",
+    "pages/goods_detail2.0/goods_detail2.0"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工作",
+        "iconPath": "images/tabbar/text.png",
+        "selectedIconPath": "images/tabbar/onText.png"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "text": "助手",
+        "iconPath": "images/tabbar/assistants.png",
+        "selectedIconPath": "images/tabbar/onAssistants.png"
+      },
+      {
+        "pagePath": "pages/add_goods/add_goods",
+        "text": "常用",
+        "iconPath": "images/tabbar/add.png",
+        "selectedIconPath": "images/tabbar/onAdd.png"
+      },
+      {
+        "pagePath": "pages/good_gl/good_gl",
+        "text": "分析",
+        "iconPath": "images/tabbar/analyse.png",
+        "selectedIconPath": "images/tabbar/onAnalyse.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我",
+        "iconPath": "images/tabbar/mine.png",
+        "selectedIconPath": "images/tabbar/onMine.png"
+      }
+    ],
+    "borderStyle": "black",
+    "color": "black",
+    "selectedColor": "#fccd05",
+    "backgroundColor": "white",
+    "position": "bottom",
+    "custom": true
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "早上好！张先生",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

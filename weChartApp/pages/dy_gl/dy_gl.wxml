@@ -1,0 +1,28 @@
+<view class="container">
+
+  <view class="sousuo">
+    <view class="inps">
+      <i class="weui-icon-search"></i>
+      <input class="inp" type="text" search placeholder="请输入理货员名称" bindinput="sel_dy" />
+    </view>
+    <button class="btn" bindtap="to_add">添加店员</button>
+  </view>
+
+  <view class="lh red">共计店员数量{{dy_li.length}}人</view>
+
+  <view class="card" style='{{"height:"+sx+"px;"}}'>
+    <view wx:for="{{dy_li}}" wx:key="*this" class="display_flex myrowbb pad1">
+      <view bindtap="ch_peo" data-peo="{{item}}" class="flexinput">
+        <view decode="nbsp" class="hh">
+          {{item.dy_name}} {{item.dy_tel}}
+        </view>
+        <view class="grey">角色权限：{{item.dy_right}}</view>
+        <view class="grey">创建时间：{{item.dy_intime}}</view>
+      </view>
+      <view class="flexone">
+        <button class="mini-btn warn" bindtap="dele" data-id="{{item.dy_id}}" size="mini">删除</button>
+      </view>
+    </view>
+  </view>
+
+</view>
